@@ -1,0 +1,46 @@
+@use "style/fonts";
+@use "style/reset";
+@use "style/var" as *;
+@use "style/services";
+@use "style/brands";
+@use "style/technic";
+@use "style/prices";
+@use "style/footer";
+@use "style/menu";
+@use "style/feedback";
+@use "style/call";
+
+
+
+body{
+min-width: 320px;
+font-family: $font-family-base;
+background-color: $color-two;
+}
+
+@media only screen and (min-width: 1120px) {
+.page-wrapper {
+margin: 0 auto;
+max-width: 1440px;
+position: relative;
+}
+
+.container{
+margin-left: 320px;
+position: relative;
+}
+
+.mobile-menu {
+display: block;
+box-shadow: none;
+position: absolute;
+}
+.mobile-menu__container{
+position: fixed;
+}
+
+.mobile-menu__burger {
+display: none;
+}
+
+}

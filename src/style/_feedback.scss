@@ -1,0 +1,246 @@
+@use "var" as *;
+
+.feedback {
+position: fixed;
+min-width: 320px;
+height: 100%;
+z-index: 12;
+display: none;
+background-color: $color-background;
+
+	&__header {
+		margin: 24px 16px;
+	}
+
+	&__header-button {
+		width: 40px;
+		height: 40px;
+		transition: all 0.3s ease;
+	}
+	&__header-button:hover {
+		opacity: 0.6;
+		transform: scale(1.1);
+	}
+
+	&__header-button:active {
+		transform: scale(0.9);
+	}
+
+	&__header-title {
+		color: $color-text;
+		padding-top: 40px;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: -0.6px;
+		position: relative;
+	}
+
+	&__header-title::before{
+		content: "";
+		position: absolute;
+		height: 40px;
+		width: 4px;
+		left: -16px;
+		background-color: $color-four;
+		border-radius: 0px 10px 10px 0px;
+}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin: 16px;
+	}
+
+	&__form-name {
+		border: 1px solid $color-border2;
+		height: 48px;
+		border-radius: 8px;
+		padding-left: 16px;
+
+	&:hover{
+		border: 1px solid $color-four;
+		border-radius: 8px;
+		}
+
+	&:focus {
+		border: 2px solid $color-three;
+		border-radius: 8px;
+	}
+	}
+
+	&__form-phone {
+		border: 1px solid $color-border2;
+		height: 48px;
+		border-radius: 8px;
+		padding-left: 16px;
+
+	&:hover{
+		border: 1px solid $color-four;
+		border-radius: 8px;
+	}
+
+	&:focus {
+		border: 2px solid $color-three;
+		border-radius: 8px;
+	}
+	}
+
+	&__form-email {
+		border: 1px solid $color-border2;
+		height: 48px;
+		border-radius: 8px;
+		padding-left: 16px;
+
+	&:hover{
+		border: 1px solid $color-four;
+		border-radius: 8px;
+	}
+
+	&:focus {
+		border: 2px solid $color-three;
+		border-radius: 8px;
+	}
+	}
+
+	&__form-text {
+		border: 1px solid $color-border2;
+		height: 118px;
+		border-radius: 8px;
+		padding-left: 16px;
+		padding-top: 12px;
+
+	&:hover{
+		border: 1px solid $color-four;
+		border-radius: 8px;
+	}
+
+	&:focus {
+		border: 2px solid $color-three;
+		border-radius: 8px;
+	}
+	}
+
+
+
+
+
+	&__submit {
+		margin: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 19px;
+	}
+
+	&__submit-agreement {
+		color: $color-text2;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 0px;
+	}
+
+	&__submit-agreement span {
+		color: $color-three;
+	}
+
+	&__submit-button {
+		background-color: $color-three;
+		width: 119px;
+		height: 32px;
+		border-radius: 16px;
+		align-self: flex-end;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		transition: all 0.3s ease;
+	}
+
+	&__submit-button:active {
+		transform: scale(0.9);
+	}
+
+	&__submit-button--text {
+		padding-left: 8px;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 24px;
+		letter-spacing: -0.15px;
+		text-align: right;
+		text-transform: uppercase;
+		color: $color-background;
+	}
+
+	&__submit-button--icon {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.feedback--open {
+display: block;
+}
+
+.feedback__overlay {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: $color-background;
+opacity: 0.9;
+z-index: 11;
+}
+
+.feedback__overlay--visible {
+display: block;
+}
+
+
+@media only screen and (min-width: 440px) {
+.feedback {
+position: fixed;
+top: 0;
+right: 0;
+width: 440px;
+box-shadow: 16px 0px 52px 0px $color-shadow;
+border-left: 1px solid $color-border;
+
+	&__header {
+		margin: 40px 32px 24px;
+		display: flex;
+	}
+
+	&__header-button {
+		position: absolute;
+		left: -65px;
+		top: 32px;
+	}
+
+	&__header-title {
+		padding: 0;
+	}
+
+.feedback__header-title::before{
+		width: 3px;
+		border-radius: 0px 2px 2px 0px;
+		left: -32px;
+		top: -8px;
+}
+
+	&__form {
+		margin-right: 32px;
+		margin-left: 32px;
+	}
+
+	&__submit {
+		margin-left: 32px;
+		margin-right: 32px;
+		gap: 23px;
+	}
+
+}
+
+}
